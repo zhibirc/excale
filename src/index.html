@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Express Calendar</title>
+    </head>
+    <body>
+    <div class="be-my-calendar" id="calendar"></div>
 
-</body>
+    <script src="main.js"></script>
+    <script>
+        const excale = new Excale({
+            bindTo: document.getElementById('calendar'),
+            moment: {
+                year:  2020,
+                month: 3,
+                day:   1
+            },
+            styles: {
+                classRoot: ''
+            }
+        });
+    </script>
+    </body>
 </html>
