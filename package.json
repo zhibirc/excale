@@ -1,0 +1,23 @@
+{
+    "name": "excale",
+    "version": "1.0.0",
+    "description": "",
+    "author": {
+        "name": "Yaroslav Surilov",
+        "email": ""
+    },
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "cjs-eslint": "^1.1.2",
+        "eslint": "^5.5.0",
+        "mocha": "^5.2.0",
+        "should": "^13.2.3",
+        "webpack": "^4.41.6",
+        "webpack-cli": "^3.3.11"
+    },
+    "keywords": [],
+    "license": "MIT"
+}
