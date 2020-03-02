@@ -5,19 +5,19 @@
         <title>Express Calendar</title>
     </head>
     <body>
-    <div class="be-my-calendar" id="calendar"></div>
+    <div id="calendar"></div>
 
     <script src="main.js"></script>
     <script>
         const excale = new Excale({
+            year:  2020,
+            month: 3,
+            day:   1,
+
             bindTo: document.getElementById('calendar'),
-            moment: {
-                year:  2020,
-                month: 3,
-                day:   1
-            },
-            styles: {
-                classRoot: ''
+
+            styleClasses: {
+                root: 'be-my-calendar'
             }
         });
     </script>
