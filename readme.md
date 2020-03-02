@@ -7,6 +7,7 @@
 
 Core ideas:
 
+- zero-dependency;
 - often times customization flexibility is more important than a variety of out-of-the-box features, amount of which is often not enough for project purposes,
   so the first goal was to provide the most basic implementation, but extendable enough in the same time to build more features on top;
 - some basic concepts such as `show`/`hide` methods are omitted, because in modular UI they expect to be present in prototype chain, like basic `component` module;
