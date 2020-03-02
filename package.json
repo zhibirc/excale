@@ -8,6 +8,7 @@
     },
     "private": true,
     "scripts": {
+        "build": "webpack",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
@@ -15,6 +16,7 @@
         "eslint": "^5.5.0",
         "mocha": "^5.2.0",
         "should": "^13.2.3",
+        "terser-webpack-plugin": "^2.3.5",
         "webpack": "^4.41.6",
         "webpack-cli": "^3.3.11"
     },
