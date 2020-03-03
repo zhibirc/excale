@@ -38,7 +38,7 @@ const element = (name, content = '', classList = [], attributes = {}) => {
 };
 
 function buildMonthDOM ( config ) {
-    const $container    = element('div', null, [`${BASE_BLOCK}`]);
+    const $container    = element('div', null, [`${BASE_BLOCK}`, config.className]);
     const $header       = element('div', config.monthName, [`${BASE_BLOCK}__month-header`]);
     const $weekdayNames = element('div', null, [`${BASE_BLOCK}__weekday-names`]);
     const $days         = element('div', null, [`${BASE_BLOCK}__days`]);
@@ -60,6 +60,7 @@ class Excale {
 
         this.dom = {
             $month: buildMonthDOM({
+                className: config.className || '',
                 monthName: i18n.months[date.getMonth()],
                 dayStart:  date.getDay(),
                 daysCount: 32 - (new Date(date.setDate(32))).getDate()
