@@ -10,7 +10,7 @@
 
 'use strict';
 
-const BASE_CLASS_PREFIX = 'excale';
+const BASE_BLOCK = 'excale';
 
 const locale = {
     monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -39,15 +39,14 @@ const a = (content, className) => {
 };
 
 function buildMonthDOM ( config ) {
-    const $container    = div(null, `${BASE_CLASS_PREFIX}-month-item`);
-    const $header       = div(config.monthName, `${BASE_CLASS_PREFIX}-month-item__header`);
-    const $weekdayNames = div(null, `${BASE_CLASS_PREFIX}-month-item__weekday-names`);
-    const $days         = div(null, `${BASE_CLASS_PREFIX}-month-item__days`);
+    const $container    = div(null, `${BASE_BLOCK}`);
+    const $header       = div(config.monthName, `${BASE_BLOCK}__month-header`);
+    const $weekdayNames = div(null, `${BASE_BLOCK}__weekday-names`);
+    const $days         = div(null, `${BASE_BLOCK}__days`);
 
     config.dayNames.forEach(dayName => $weekdayNames.appendChild(div(dayName)));
     Array.from({length: config.dayStart}, () => $days.appendChild(div()));
-    Array.from({length: config.daysCount}, (item, index) => $days.appendChild(a(index + 1, `${BASE_CLASS_PREFIX}-day-item`)));
-    Array.from({length: ++config.daysCount % 7}, () => () => $days.appendChild(div()));
+    Array.from({length: config.daysCount}, (item, index) => $days.appendChild(a(index + 1, `${BASE_BLOCK}__day`)));
 
     $container.appendChild($header);
     $container.appendChild($weekdayNames);

@@ -9,15 +9,19 @@
     "private": true,
     "scripts": {
         "build": "webpack",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "serve": "cd ../src && livereloadx -s ."
     },
     "devDependencies": {
         "cjs-eslint": "^1.1.2",
         "eslint": "^5.5.0",
         "mocha": "^5.2.0",
+        "node-sass": "^4.13.1",
+        "sass": "^1.26.2",
+        "sass-loader": "^8.0.2",
         "should": "^13.2.3",
         "terser-webpack-plugin": "^2.3.5",
-        "webpack": "^4.41.6",
+        "webpack": "^4.42.0",
         "webpack-cli": "^3.3.11"
     },
     "keywords": [],
