@@ -10,7 +10,7 @@
     "scripts": {
         "build": "webpack",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "serve": "cd ../src && livereloadx -s ."
+        "serve": "cd src && livereloadx -s ."
     },
     "devDependencies": {
         "cjs-eslint": "^1.1.2",
