@@ -12,12 +12,16 @@
 
     &__month-header {
         display: flex;
-        justify-content: space-evenly;
-        font-weight: 500;
+        justify-content: center;
+        font-weight: bold;
         padding: 10px 5px;
-        text-align: center;
         align-items: center;
         color: var(--monthHeaderTextColor);
+
+        &-name,
+        &-year {
+            padding: 0 10px;
+        }
     }
 
     &__weekday-names {

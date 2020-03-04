@@ -1,37 +1,36 @@
-:root {
-  --litepickerMonthWidth: calc(var(--litepickerDayWidth) * 7);
-  --litepickerMonthHeaderTextColor: #333;
-  --litepickerMonthWeekdayColor: #9e9e9e;
-  --litepickerDayWidth: 38px;
-  --litepickerDayColor: #333;
-  --litepickerDayColorHover: #2196f3;
-}
-
 .excale {
+  --monthWidth: calc(var(--dayWidth) * 7);
+  --monthHeaderTextColor: #333;
+  --monthWeekdayColor: #9e9e9e;
+  --dayWidth: 38px;
+  --dayColor: #333;
+  --dayColorHover: #2196f3;
   padding: 5px;
-  width: var(--litepickerMonthWidth);
+  width: var(--monthWidth);
   box-sizing: content-box;
 }
 .excale__month-header {
   display: flex;
-  justify-content: space-evenly;
-  font-weight: 500;
+  justify-content: center;
+  font-weight: bold;
   padding: 10px 5px;
-  text-align: center;
   align-items: center;
-  color: var(--litepickerMonthHeaderTextColor);
+  color: var(--monthHeaderTextColor);
+}
+.excale__month-header-name, .excale__month-header-year {
+  padding: 0 10px;
 }
 .excale__weekday-names {
   display: flex;
   justify-self: center;
   justify-content: flex-start;
-  color: var(--litepickerMonthWeekdayColor);
+  color: var(--monthWeekdayColor);
 }
 .excale__weekday-names > div {
   padding: 5px 0;
   font-size: 85%;
   flex: 1;
-  width: var(--litepickerDayWidth);
+  width: var(--dayWidth);
   text-align: center;
 }
 .excale__days {
@@ -45,10 +44,10 @@
 .excale__days > div,
 .excale__days > a {
   padding: 5px 0;
-  width: var(--litepickerDayWidth);
+  width: var(--dayWidth);
 }
 .excale__day {
-  color: var(--litepickerDayColor);
+  color: var(--dayColor);
   text-align: center;
   text-decoration: none;
   border-radius: 3px;
@@ -56,8 +55,8 @@
   cursor: default;
 }
 .excale__day:hover {
-  color: var(--litepickerDayColorHover);
-  box-shadow: inset 0 0 0 1px var(--litepickerDayColorHover);
+  color: var(--dayColorHover);
+  box-shadow: inset 0 0 0 1px var(--dayColorHover);
 }
 
 /*# sourceMappingURL=main.css.map */

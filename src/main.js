@@ -39,14 +39,22 @@ const element = (name, content = '', classList = [], attributes = {}) => {
 
 function buildMonthDOM ( config ) {
     const $container    = element('div', null, [`${BASE_BLOCK}`, config.className]);
-    const $header       = element('div', config.monthName, [`${BASE_BLOCK}__month-header`]);
+    const $header       = element('div', null, [`${BASE_BLOCK}__month-header`]);
     const $weekdayNames = element('div', null, [`${BASE_BLOCK}__weekday-names`]);
     const $days         = element('div', null, [`${BASE_BLOCK}__days`]);
 
+    // build HEADER
+    $header.appendChild(element('span', i18n.months[config.month], [`${BASE_BLOCK}__month-header-name`]));
+    $header.appendChild(element('span', config.year, [`${BASE_BLOCK}__month-header-year`]));
+
+    // build WEEK DAY NAMES row
     i18n.daysShort.forEach((dayName, index) => $weekdayNames.appendChild(element('div', dayName, [], {title: i18n.days[index]})));
-    Array.from({length: config.dayStart}, () => $days.appendChild(element('div')));
+
+    // build DAYS
+    Array.from({length: config.day}, () => $days.appendChild(element('div')));
     Array.from({length: config.daysCount}, (item, index) => $days.appendChild(element('a', index + 1, [`${BASE_BLOCK}__day`])));
 
+    // assembly separate month blocks
     $container.appendChild($header);
     $container.appendChild($weekdayNames);
     $container.appendChild($days);
@@ -61,8 +69,9 @@ class Excale {
         this.dom = {
             $month: buildMonthDOM({
                 className: config.className || '',
-                monthName: i18n.months[date.getMonth()],
-                dayStart:  date.getDay(),
+                year:      date.getFullYear(),
+                month:     date.getMonth(),
+                day:       date.getDay(),
                 daysCount: 32 - (new Date(date.setDate(32))).getDate()
             })
         };
