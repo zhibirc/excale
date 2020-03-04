@@ -5,8 +5,9 @@ module.exports = {
     extends: require.resolve('cjs-eslint'),
 
     env: {
-        es6: true,
-        browser: true
+        es6:     true,
+        browser: true,
+        mocha:   true
     },
 
     rules: {
