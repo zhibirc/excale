@@ -14,11 +14,25 @@
   justify-content: center;
   font-weight: bold;
   padding: 10px 5px;
+  position: relative;
   align-items: center;
   color: var(--monthHeaderTextColor);
 }
 .excale__month-header-name, .excale__month-header-year {
   padding: 0 10px;
+}
+.excale__month-header-arrow {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 2px;
+  position: absolute;
+}
+.excale__month-header-arrow:first-of-type {
+  left: 8px;
+}
+.excale__month-header-arrow:last-of-type {
+  right: 8px;
 }
 .excale__weekday-names {
   display: flex;

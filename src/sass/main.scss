@@ -15,12 +15,29 @@
         justify-content: center;
         font-weight: bold;
         padding: 10px 5px;
+        position: relative;
         align-items: center;
         color: var(--monthHeaderTextColor);
 
         &-name,
         &-year {
             padding: 0 10px;
+        }
+
+        &-arrow {
+            background: rgba(0, 0, 0, .15);
+            border-radius: 2px;
+            cursor: pointer;
+            padding: 2px;
+            position: absolute;
+
+            &:first-of-type {
+                left: 8px;
+            }
+
+            &:last-of-type {
+                right: 8px;
+            }
         }
     }
 

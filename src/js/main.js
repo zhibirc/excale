@@ -44,8 +44,13 @@ function buildMonthDOM ( config ) {
     const $days         = element('div', null, [`${BASE_BLOCK}__days`]);
 
     // build HEADER
-    $header.appendChild(element('span', i18n.months[config.month], [`${BASE_BLOCK}__month-header-name`]));
-    $header.appendChild(element('span', config.year, [`${BASE_BLOCK}__month-header-year`]));
+    [
+        element('b', '❮', [`${BASE_BLOCK}__month-header-arrow`]),
+        element('span', i18n.months[config.month], [`${BASE_BLOCK}__month-header-name`]),
+        element('span', config.year, [`${BASE_BLOCK}__month-header-year`]),
+        element('b', '❯', [`${BASE_BLOCK}__month-header-arrow`])
+    ].forEach($header.appendChild.bind($header));
+
 
     // build WEEK DAY NAMES row
     i18n.daysShort.forEach((dayName, index) => $weekdayNames.appendChild(element('div', dayName, [], {title: i18n.days[index]})));
