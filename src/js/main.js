@@ -71,6 +71,8 @@ class Excale {
     constructor ( config = {} ) {
         const date = config.year && config.month ? new Date(config.year, config.month - 1) : new Date();
 
+        this.events = config.events || [];
+
         this.dom = {
             $month: buildMonthDOM({
                 className: config.className || '',
@@ -82,6 +84,10 @@ class Excale {
         };
 
         (config.bindTo || document.body).appendChild(this.dom.$month);
+    }
+
+    scroll () {
+        // todo: implement
     }
 }
 

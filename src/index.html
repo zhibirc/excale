@@ -17,7 +17,15 @@
 
             bindTo: document.getElementById('calendar'),
 
-            className: 'be-my-calendar'
+            className: 'be-my-calendar',
+
+            events: {
+                scroll: direction => {
+                    console.log(direction);
+
+                    /* do some cool stuff */
+                }
+            }
         });
     </script>
     </body>
