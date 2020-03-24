@@ -20,8 +20,8 @@
             className: 'be-my-calendar',
 
             events: {
-                scroll: direction => {
-                    console.log(direction);
+                scroll: (direction, dateFrom, dateTo) => {
+                    console.log(`Scroll ${['back', 'for'][direction]}ward from ${dateFrom} to ${dateTo}.`);
 
                     /* do some cool stuff */
                 }
