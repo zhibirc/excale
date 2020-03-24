@@ -5,7 +5,9 @@
 
 # Express Calendar
 
-Core ideas:
+Simple and solid implementation of Calendar UI component.
+
+**Core ideas:**
 
 - zero-dependency;
 - often times customization flexibility is more important than a variety of out-of-the-box features, amount of which is often not enough for project purposes,
@@ -13,3 +15,7 @@ Core ideas:
 - some basic concepts such as `show`/`hide` methods are omitted, because in modular UI they expect to be present in prototype chain, like basic `component` module;
 - realization is in OOP-style, so users can instantiate as many independents calendars as they want;
 - resulting bundle size is one of project priorities so some syntax constructions and architectural decisions sometimes may look strange (google "abnormal programming").
+
+## License
+
+**excale** is [MIT licensed](./license.md).
