@@ -104,12 +104,12 @@ class Excale {
         (config.bindTo || document.body).appendChild(this.$node);
     }
 
-    static get DIRECTION_NEXT () {
-        return DIRECTION_NEXT;
-    }
-
     static get DIRECTION_PREVIOUS () {
         return DIRECTION_PREVIOUS;
+    }
+
+    static get DIRECTION_NEXT () {
+        return DIRECTION_NEXT;
     }
 
     scroll ( direction ) {

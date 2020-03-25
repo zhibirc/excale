@@ -16,6 +16,21 @@ Simple and solid implementation of Calendar UI component.
 - realization is in OOP-style, so users can instantiate as many independents calendars as they want;
 - resulting bundle size is one of project priorities so some syntax constructions and architectural decisions sometimes may look strange (google "abnormal programming").
 
+## API
+
+### Public
+
+| Property           | Scope         |  Type                   | Arguments | Purpose                                                  |
+|--------------------|---------------|-------------------------|-----------|----------------------------------------------------------|
+| date               | self          | [object Date]           | -         | Current date.                                            |
+| events             | self          | [object Object]         | -         | User-level subscriptions.                                |
+| $node              | self          | [object HTMLDivElement] | -         | Root DOM element of instance for extended customization. |
+| scroll             | prototype     | [object Function]       | direction | Scroll/switch to the previous/next month.                |
+| DIRECTION_PREVIOUS | static getter | [object Symbol]         | -         | Pre-defined constant for backward direction.             |
+| DIRECTION_NEXT     | static getter | [object Symbol]         | -         | Pre-defined constant for forward direction.              |
+
+### Initial config
+
 ## License
 
 **excale** is [MIT licensed](./license.md).
