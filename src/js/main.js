@@ -83,7 +83,7 @@ class Excale {
     constructor ( config = {} ) {
         this.date   = config.year && config.month ? new Date(config.year, config.month - 1) : new Date();
         this.$node  = buildMonthDOM({...getDateMetrics(this.date), className: config.className || ''});
-        this.events = config.events || [];
+        this.events = config.events || {};
 
         this.$node.$arrowPrevious.addEventListener('click', () => {
             const currentDate = this.date;
