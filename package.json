@@ -16,7 +16,7 @@
         "cjs-eslint": "^1.1.2",
         "eslint": "^5.5.0",
         "mocha": "^5.2.0",
-        "node-sass": "^4.13.1",
+        "node-sass": "^7.0.0",
         "sass": "^1.26.2",
         "sass-loader": "^8.0.2",
         "should": "^13.2.3",
