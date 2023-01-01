@@ -18,11 +18,11 @@
         "mocha": "^5.2.0",
         "node-sass": "^4.13.1",
         "sass": "^1.26.2",
-        "sass-loader": "^8.0.2",
+        "sass-loader": "^13.2.0",
         "should": "^13.2.3",
         "terser-webpack-plugin": "^2.3.5",
-        "webpack": "^4.42.0",
-        "webpack-cli": "^3.3.11"
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1"
     },
     "keywords": [],
     "license": "MIT"
